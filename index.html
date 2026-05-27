@@ -69,9 +69,7 @@
           --primitive-radius-xl: 16px;
           --primitive-radius-full: 9999px;
 
-          /* TIER 1: PRIMITIVES - TYPOGRAPHY */
-          --primitive-font-serif: 'EB Garamond', 'Georgia', serif;
-          --primitive-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          /* TYPOGRAPHY PRIMITIVES - FONT SIZES */
           --primitive-font-size-xs: 10px;
           --primitive-font-size-sm: 12px;
           --primitive-font-size-base: 14px;
@@ -83,23 +81,213 @@
           --primitive-font-size-4xl: 48px;
           --primitive-font-size-5xl: 56px;
 
+          /* TYPOGRAPHY PRIMITIVES - FONT WEIGHTS */
           --primitive-font-weight-regular: 400;
           --primitive-font-weight-medium: 500;
           --primitive-font-weight-semibold: 600;
           --primitive-font-weight-bold: 700;
           --primitive-font-weight-extrabold: 800;
 
+          /* TYPOGRAPHY PRIMITIVES - LINE HEIGHTS */
           --primitive-line-height-tight: 1.1;
           --primitive-line-height-snug: 1.25;
           --primitive-line-height-normal: 1.5;
           --primitive-line-height-relaxed: 1.6;
           --primitive-line-height-loose: 1.8;
 
+          /* TYPOGRAPHY PRIMITIVES - LETTER SPACING */
           --primitive-letter-spacing-tight: -0.02em;
           --primitive-letter-spacing-normal: 0em;
           --primitive-letter-spacing-wide: 0.05em;
           --primitive-letter-spacing-wider: 0.1em;
           --primitive-letter-spacing-widest: 0.15em;
+
+          /* TYPOGRAPHY TOKENS - DISPLAY (Large Headlines) */
+          --semantic-type-display-lg: {
+            font-family: var(--semantic-font-serif);
+            font-size: 56px;
+            font-weight: var(--primitive-font-weight-bold);
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+          };
+
+          --semantic-type-display-md: {
+            font-family: var(--semantic-font-serif);
+            font-size: 48px;
+            font-weight: var(--primitive-font-weight-bold);
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+          };
+
+          --semantic-type-display-sm: {
+            font-family: var(--semantic-font-serif);
+            font-size: 42px;
+            font-weight: var(--primitive-font-weight-bold);
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+          };
+
+          /* TYPOGRAPHY TOKENS - HEADING (Section Titles) */
+          --semantic-type-heading-lg: {
+            font-family: var(--semantic-font-serif);
+            font-size: 36px;
+            font-weight: var(--primitive-font-weight-bold);
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+          };
+
+          --semantic-type-heading-md: {
+            font-family: var(--semantic-font-serif);
+            font-size: 28px;
+            font-weight: var(--primitive-font-weight-bold);
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+          };
+
+          --semantic-type-heading-sm: {
+            font-family: var(--semantic-font-serif);
+            font-size: 24px;
+            font-weight: var(--primitive-font-weight-bold);
+            line-height: 1.35;
+            letter-spacing: -0.01em;
+          };
+
+          --semantic-type-heading-xs: {
+            font-family: var(--semantic-font-serif);
+            font-size: 18px;
+            font-weight: var(--primitive-font-weight-bold);
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+          };
+
+          /* TYPOGRAPHY TOKENS - BODY (Regular Text) */
+          --semantic-type-body-lg: {
+            font-family: var(--semantic-font-sans);
+            font-size: 16px;
+            font-weight: var(--primitive-font-weight-regular);
+            line-height: 1.65;
+            letter-spacing: normal;
+          };
+
+          --semantic-type-body-md: {
+            font-family: var(--semantic-font-sans);
+            font-size: 14px;
+            font-weight: var(--primitive-font-weight-regular);
+            line-height: 1.65;
+            letter-spacing: normal;
+          };
+
+          --semantic-type-body-sm: {
+            font-family: var(--semantic-font-sans);
+            font-size: 12px;
+            font-weight: var(--primitive-font-weight-regular);
+            line-height: 1.6;
+            letter-spacing: normal;
+          };
+
+          /* TYPOGRAPHY TOKENS - BODY STRONG (Emphasized Text) */
+          --semantic-type-body-strong-lg: {
+            font-family: var(--semantic-font-sans);
+            font-size: 16px;
+            font-weight: var(--primitive-font-weight-semibold);
+            line-height: 1.65;
+            letter-spacing: normal;
+          };
+
+          --semantic-type-body-strong-md: {
+            font-family: var(--semantic-font-sans);
+            font-size: 14px;
+            font-weight: var(--primitive-font-weight-semibold);
+            line-height: 1.65;
+            letter-spacing: normal;
+          };
+
+          --semantic-type-body-strong-sm: {
+            font-family: var(--semantic-font-sans);
+            font-size: 12px;
+            font-weight: var(--primitive-font-weight-semibold);
+            line-height: 1.6;
+            letter-spacing: normal;
+          };
+
+          /* TYPOGRAPHY TOKENS - LABEL (Form Labels, Small Text) */
+          --semantic-type-label-lg: {
+            font-family: var(--semantic-font-sans);
+            font-size: 14px;
+            font-weight: var(--primitive-font-weight-medium);
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+          };
+
+          --semantic-type-label-md: {
+            font-family: var(--semantic-font-sans);
+            font-size: 12px;
+            font-weight: var(--primitive-font-weight-medium);
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+          };
+
+          --semantic-type-label-sm: {
+            font-family: var(--semantic-font-sans);
+            font-size: 10px;
+            font-weight: var(--primitive-font-weight-medium);
+            line-height: 1.4;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+          };
+
+          /* TYPOGRAPHY TOKENS - CODE (Monospace for Code) */
+          --semantic-type-code-lg: {
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: var(--primitive-font-weight-regular);
+            line-height: 1.6;
+            letter-spacing: normal;
+          };
+
+          --semantic-type-code-md: {
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 12px;
+            font-weight: var(--primitive-font-weight-regular);
+            line-height: 1.6;
+            letter-spacing: normal;
+          };
+
+          --semantic-type-code-sm: {
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 10px;
+            font-weight: var(--primitive-font-weight-regular);
+            line-height: 1.5;
+            letter-spacing: normal;
+          };
+
+          /* TYPOGRAPHY TOKENS - CAPTION (Small Descriptive Text) */
+          --semantic-type-caption-lg: {
+            font-family: var(--semantic-font-sans);
+            font-size: 14px;
+            font-weight: var(--primitive-font-weight-regular);
+            line-height: 1.5;
+            letter-spacing: normal;
+            color: var(--semantic-color-text-secondary);
+          };
+
+          --semantic-type-caption-md: {
+            font-family: var(--semantic-font-sans);
+            font-size: 12px;
+            font-weight: var(--primitive-font-weight-regular);
+            line-height: 1.5;
+            letter-spacing: normal;
+            color: var(--semantic-color-text-secondary);
+          };
+
+          --semantic-type-caption-sm: {
+            font-family: var(--semantic-font-sans);
+            font-size: 10px;
+            font-weight: var(--primitive-font-weight-regular);
+            line-height: 1.4;
+            letter-spacing: normal;
+            color: var(--semantic-color-text-tertiary);
+          };
 
           /* TIER 1: PRIMITIVES - SHADOWS */
           --primitive-shadow-none: 0px 0px 0px rgba(0, 0, 0, 0);
