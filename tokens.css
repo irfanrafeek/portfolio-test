@@ -64,6 +64,11 @@
   --primitive-radius-xl: 16px;
   --primitive-radius-full: 9999px;
 
+  /* TYPOGRAPHY PRIMITIVES - FONT FAMILIES */
+  --primitive-font-serif: 'EB Garamond', 'Georgia', serif;
+  --primitive-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --primitive-font-mono: 'Monaco', 'Courier New', monospace;
+
   /* TYPOGRAPHY PRIMITIVES - FONT SIZES (Base 16px) */
   --primitive-font-size-xs: 12px;
   --primitive-font-size-sm: 14px;
@@ -328,6 +333,7 @@
 
   --semantic-font-serif: var(--primitive-font-serif);
   --semantic-font-sans: var(--primitive-font-sans);
+  --semantic-font-mono: var(--primitive-font-mono);
 }
 
 /* DARK MODE */
