@@ -334,6 +334,12 @@
   --semantic-font-serif: var(--primitive-font-serif);
   --semantic-font-sans: var(--primitive-font-sans);
   --semantic-font-mono: var(--primitive-font-mono);
+
+  /* LAYOUT - Container max-widths
+     Named variants for content container widths. Use modifier classes
+     (.container, .container--narrow) rather than ad-hoc overrides. */
+  --semantic-layout-container-max-width-default: 1200px;
+  --semantic-layout-container-max-width-narrow: 1000px;
 }
 
 /* DARK MODE */
