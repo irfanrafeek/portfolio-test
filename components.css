@@ -432,25 +432,49 @@ footer {
     position: fixed;
     bottom: var(--semantic-spacing-xl);
     right: var(--semantic-spacing-xl);
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     border-radius: var(--semantic-radius-full);
-    background-color: var(--semantic-color-interactive-primary);
-    color: var(--semantic-color-text-inverse);
-    border: none;
+    background-color: transparent;
+    color: var(--semantic-color-text-primary);
+    border: 1px solid var(--semantic-color-border-primary);
     cursor: pointer;
-    font-size: var(--primitive-font-size-lg);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
-    box-shadow: var(--semantic-shadow-lg);
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
     z-index: 999;
+    padding: 0;
 }
 
 .theme-toggle:hover {
-    background-color: var(--semantic-color-interactive-primary-hover);
-    transform: scale(1.1);
+    border-color: var(--semantic-color-border-strong);
+    background-color: var(--semantic-color-background-secondary);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--semantic-color-interactive-primary);
+    outline-offset: 2px;
+}
+
+.theme-toggle__icon {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+/* Default (light theme): show sun, hide moon */
+.theme-toggle__icon--sun { display: block; }
+.theme-toggle__icon--moon { display: none; }
+
+/* Manual dark theme: show moon, hide sun */
+[data-theme='dark'] .theme-toggle__icon--sun { display: none; }
+[data-theme='dark'] .theme-toggle__icon--moon { display: block; }
+
+/* System dark theme (only when user has no manual override): show moon */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) .theme-toggle__icon--sun { display: none; }
+    :root:not([data-theme]) .theme-toggle__icon--moon { display: block; }
 }
 
 /* ===== RESPONSIVE ===== */
@@ -533,9 +557,8 @@ footer {
     }
 
     .theme-toggle {
-        width: 45px;
-        height: 45px;
-        font-size: var(--primitive-font-size-base);
+        width: 40px;
+        height: 40px;
     }
 
     .category-tag {
