@@ -148,10 +148,16 @@
   --semantic-type-heading-sm-letter-spacing: -0.01em;
 
   --semantic-type-heading-xs-font-family: var(--semantic-font-serif);
-  --semantic-type-heading-xs-font-size: var(--primitive-font-size-lg);
+  --semantic-type-heading-xs-font-size: var(--primitive-font-size-xl-sm);
   --semantic-type-heading-xs-font-weight: var(--primitive-font-weight-bold);
   --semantic-type-heading-xs-line-height: 1.4;
   --semantic-type-heading-xs-letter-spacing: -0.01em;
+
+  --semantic-type-heading-2xs-font-family: var(--semantic-font-serif);
+  --semantic-type-heading-2xs-font-size: var(--primitive-font-size-lg);
+  --semantic-type-heading-2xs-font-weight: var(--primitive-font-weight-bold);
+  --semantic-type-heading-2xs-line-height: 1.4;
+  --semantic-type-heading-2xs-letter-spacing: -0.01em;
 
   /* ────────────────────────────────────────────────────────────────────────
      SEMANTIC: TYPOGRAPHY TOKENS - BODY (Regular Text)
