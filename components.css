@@ -47,11 +47,24 @@ nav.scrolled {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--semantic-spacing-sm);
     font-size: var(--primitive-font-size-sm);
     font-weight: var(--primitive-font-weight-semibold);
     letter-spacing: var(--primitive-letter-spacing-widest);
     text-transform: uppercase;
     color: var(--semantic-color-text-primary);
+    text-decoration: none;
+}
+
+/* 24px avatar thumbnail before the name — sizing & radius from design tokens */
+.logo-thumb {
+    width: var(--semantic-spacing-lg);   /* 24px */
+    height: var(--semantic-spacing-lg);  /* 24px */
+    border-radius: var(--semantic-radius-full);
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .nav-links {
@@ -89,6 +102,35 @@ nav.scrolled {
     border-color: var(--semantic-color-border-strong);
     background-color: var(--semantic-color-background-secondary);
     color: var(--semantic-color-text-primary);
+}
+
+/* Hamburger toggle — hidden on desktop, revealed under the mobile breakpoint */
+.nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--semantic-spacing-xs);
+    background: none;
+    border: none;
+    color: var(--semantic-color-text-primary);
+    cursor: pointer;
+}
+
+.nav-toggle__icon {
+    width: var(--semantic-spacing-lg);
+    height: var(--semantic-spacing-lg);
+}
+
+.nav-toggle__icon--close {
+    display: none;
+}
+
+#navbar.nav-open .nav-toggle__icon--open {
+    display: none;
+}
+
+#navbar.nav-open .nav-toggle__icon--close {
+    display: block;
 }
 
 /* ===== MAIN CONTENT ===== */
@@ -590,12 +632,35 @@ footer {
 @media (max-width: 640px) {
     nav {
         padding: var(--semantic-spacing-md) var(--semantic-spacing-lg);
-        flex-wrap: wrap;
     }
 
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    /* Collapse the links into a dropdown panel below the navbar */
     .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
         gap: var(--semantic-spacing-lg);
-        font-size: var(--primitive-font-size-xs);
+        padding: var(--semantic-spacing-lg) var(--semantic-spacing-lg) var(--semantic-spacing-xl);
+        font-size: var(--primitive-font-size-sm);
+        background-color: var(--semantic-color-background-primary);
+        border-bottom: 1px solid var(--semantic-color-border-primary);
+    }
+
+    #navbar.nav-open .nav-links {
+        display: flex;
+    }
+
+    .nav-links a.cta-button {
+        align-self: stretch;
+        text-align: center;
     }
 
     .hero-title {
