@@ -336,12 +336,12 @@ main {
 }
 
 .about-me-image {
-    width: 100%;
-    max-width: 360px;
-    height: auto;
+    width: 360px;
+    height: 360px;
     display: block;
-    border-radius: var(--semantic-radius-md);
+    border-radius: 50%;
     border: 1px solid var(--semantic-color-border-primary);
+    object-fit: cover;
 }
 
 .about-me-title {
@@ -607,7 +607,7 @@ footer {
     }
 
     .hero-title {
-        font-size: var(--primitive-font-size-3xl);
+        font-size: var(--primitive-font-size-4xl);
     }
 
     .cta-title {
@@ -664,7 +664,7 @@ footer {
     }
 
     .hero-title {
-        font-size: var(--semantic-type-heading-sm-font-size);
+        font-size: var(--semantic-type-heading-lg-font-size);
     }
 
     .cta-title {
