@@ -1,0 +1,114 @@
+{
+  "projects": [
+    {
+      "title": "Building Ambo",
+      "slug": "building-ambo",
+      "year": "2024",
+      "image": "📱",
+      "description": "Transforming an early-stage employee advocacy platform from a simple post-sharing tool into a flexible content distribution system. Redefining content workflows for scale.",
+      "tags": [
+        "product design",
+        "ux",
+        "systems"
+      ],
+      "featured": true,
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Overview"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ambo started as a simple tool for employees to share company posts to their social networks. Our goal was to evolve it into a flexible content distribution system that could scale with the needs of growing teams."
+        },
+        {
+          "type": "heading",
+          "text": "The challenge"
+        },
+        {
+          "type": "paragraph",
+          "text": "The original product assumed a single, linear workflow: an admin posts, employees share. As customers grew, they needed to create, customize, schedule, and distribute content in far more flexible ways."
+        },
+        {
+          "type": "quote",
+          "text": "We needed the product to bend to many workflows without becoming a tangle of special cases.",
+          "attribution": "Product team"
+        },
+        {
+          "type": "heading",
+          "text": "Outcome"
+        },
+        {
+          "type": "paragraph",
+          "text": "We redefined navigation, interaction patterns, and component architecture to support a broader set of workflows, building a structural foundation for long-term product growth."
+        },
+        {
+          "type": "paragraph",
+          "text": "Key UX Enhancements:\n\nContextual Priority: Replaced abstract data-entry fields with a near-final post preview. By shifting the mental model to focus directly on the output, we stripped away administrative distraction.\n\nStreamlined Media Curation: Swapped the bulky upload \"drop zone\" for a sleek, inline gallery. This provides immediate visual feedback and dramatically tightens the visual hierarchy.\n\nModular Engagement Loops: Reimagined secondary actions (like \"first comment\" and \"auto-repost\") from hidden toggles into contextual, sequential steps integrated naturally at the bottom of the drafting workflow."
+        }
+      ]
+    },
+    {
+      "title": "Condé Nast Verso",
+      "slug": "conde-nast-verso",
+      "year": "2023",
+      "image": "🎨",
+      "description": "Reimagining color theming for Condé Nast's unified design system, powering brands like Vogue, GQ, and The New Yorker with flexible, token-based color architecture.",
+      "tags": [
+        "design systems",
+        "tokens",
+        "theming"
+      ],
+      "featured": true,
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Overview"
+        },
+        {
+          "type": "paragraph",
+          "text": "Verso is Condé Nast's unified design system, powering iconic brands like Vogue, GQ, Wired, and The New Yorker. I reimagined its color theming to give each brand flexible, token-based color while keeping a single shared architecture."
+        },
+        {
+          "type": "heading",
+          "text": "Token architecture"
+        },
+        {
+          "type": "paragraph",
+          "text": "I implemented a new token structure that enabled sub-brand and component-level color theming, adopted across more than 20 brands and multiple markets to standardize layouts while preserving each brand's identity."
+        },
+        {
+          "type": "heading",
+          "text": "Impact"
+        },
+        {
+          "type": "paragraph",
+          "text": "The new system accelerated feature delivery and doubled design-system adoption across product teams through clearer governance, documentation, and advocacy."
+        }
+      ]
+    },
+    {
+      "title": "Introducing Spacing to Verso Design System",
+      "slug": "spacing-verso-design-system",
+      "year": "2022",
+      "image": "Assets/Spacing.avif",
+      "description": "In a design system, however, managing spacing across reusable components often becomes a challenge. Too much rigidity limits flexibility, while too much freedom leads to inconsistency. Verso’s approach to spacing addresses this balance. Our goal was to simplify component complexity, improve cross-brand flexibility, and create a semantic structure that scales gracefully as the system evolves.",
+      "tags": [
+        "tokens",
+        "Spacing",
+        "Design System"
+      ],
+      "featured": false,
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "The Need for Structured Spacing"
+        },
+        {
+          "type": "paragraph",
+          "text": "As Verso evolved, components had grown more complex, with individual brands introducing custom spacing props to meet their specific layout needs. This led to inconsistencies and unnecessary variations across the system.\n\n\nSpacing requirement differed from brand to brand\n\nSpacing requirement differed from brand to brand\n\nThe solution was to standardize spacing through semantic tokens that reference primitive tokens. This would create a consistent structure for spacing values, ensure design scalability, and make cross-brand customization easier.\n\n\nCore Principles for Scalable Spacing\nThe current state of spacing in Verso was highly complex and hacky, making it extremely difficult to systemize. Spacing between elements was often the unintended result of various individual spacing properties layering from multiple components."
+        }
+      ]
+    }
+  ]
+}
