@@ -92,7 +92,7 @@
       "slug": "spacing-verso-design-system",
       "year": "2022",
       "image": "Assets/Spacing.avif",
-      "description": "In a design system, however, managing spacing across reusable components often becomes a challenge. Too much rigidity limits flexibility, while too much freedom leads to inconsistency. Verso’s approach to spacing addresses this balance. Our goal was to simplify component complexity, improve cross-brand flexibility, and create a semantic structure that scales gracefully as the system evolves.",
+      "description": "Simplify component complexity, improve cross-brand flexibility, and create a semantic structure that scales gracefully as the system evolves.",
       "tags": [
         "tokens",
         "Spacing",
