@@ -45,6 +45,12 @@
         {
           "type": "paragraph",
           "text": "Key UX Enhancements:\n\nContextual Priority: Replaced abstract data-entry fields with a near-final post preview. By shifting the mental model to focus directly on the output, we stripped away administrative distraction.\n\nStreamlined Media Curation: Swapped the bulky upload \"drop zone\" for a sleek, inline gallery. This provides immediate visual feedback and dramatically tightens the visual hierarchy.\n\nModular Engagement Loops: Reimagined secondary actions (like \"first comment\" and \"auto-repost\") from hidden toggles into contextual, sequential steps integrated naturally at the bottom of the drafting workflow."
+        },
+        {
+          "type": "image",
+          "src": "/Assets/DSCF0194.jpg",
+          "alt": "",
+          "caption": ""
         }
       ]
     },
