@@ -80,3 +80,12 @@ collections:
                       - { name: src, label: "Video URL", widget: string, hint: "Full URL to an .mp4 (e.g. https://video.wixstatic.com/...)" }
                       - { name: poster, label: "Poster image", widget: string, required: false, hint: "Optional thumbnail URL or Assets/ path" }
                       - { name: caption, label: "Caption", widget: string, required: false }
+                  - name: list
+                    label: "Bulleted list"
+                    summary: "List ({{fields.items.length}} items)"
+                    fields:
+                      - name: items
+                        label: "Items"
+                        widget: list
+                        default: []
+                        field: { name: item, label: "Item", widget: string }

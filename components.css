@@ -914,6 +914,26 @@ a.project-card {
     background-color: var(--semantic-color-background-secondary);
 }
 
+/* Bulleted list inside case-study body — marker tinted with the accent color */
+.case-list {
+    margin: 0;
+    padding-left: var(--semantic-spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--semantic-spacing-sm);
+}
+
+.case-list-item {
+    font-size: var(--primitive-font-size-base);
+    line-height: var(--semantic-type-body-md-line-height);
+    color: var(--semantic-color-text-secondary);
+    padding-left: var(--semantic-spacing-xs);
+}
+
+.case-list-item::marker {
+    color: var(--semantic-color-interactive-primary);
+}
+
 .case-caption {
     margin-top: var(--semantic-spacing-sm);
     font-size: var(--primitive-font-size-sm);

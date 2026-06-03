@@ -36,6 +36,12 @@
                             controls playsinline preload="metadata"></video>
                         ${block.caption ? `<figcaption class="case-caption">${escapeHtml(block.caption)}</figcaption>` : ''}
                     </figure>`;
+            case 'list': {
+                const items = (Array.isArray(block.items) ? block.items : [])
+                    .map((item) => `<li class="case-list-item">${escapeHtml(item)}</li>`)
+                    .join('');
+                return `<ul class="case-list">${items}</ul>`;
+            }
             default:
                 return '';
         }

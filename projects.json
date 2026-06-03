@@ -4,7 +4,7 @@
       "title": "Building Ambo",
       "slug": "building-ambo",
       "year": "2026",
-      "image": "📱",
+      "image": "Assets/ambo-01.png",
       "description": "Transforming an early-stage employee advocacy platform from a simple post-sharing tool into a flexible content distribution system. Redefining content workflows for scale.",
       "tags": [
         "product design",
@@ -44,20 +44,13 @@
           "text": "This structural evolution focused on maturing four key areas:"
         },
         {
-          "type": "paragraph",
-          "text": "• Content creation workflow – Scaling the UI to support multi-variant posts/reposts without cognitive overload."
-        },
-        {
-          "type": "paragraph",
-          "text": "• Content dashboard – Helping teams manage and track content more efficiently"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Analytics – Weaving metrics into a clear narrative connected directly to reach and participation."
-        },
-        {
-          "type": "paragraph",
-          "text": "• Inspiration hub – Expanding the user journey upstream to solve for content discovery and ideation."
+          "type": "list",
+          "items": [
+            "Content creation workflow – Scaling the UI to support multi-variant posts/reposts without cognitive overload.",
+            "Content dashboard – Helping teams manage and track content more efficiently",
+            "Analytics – Weaving metrics into a clear narrative connected directly to reach and participation.",
+            "Inspiration hub – Expanding the user journey upstream to solve for content discovery and ideation."
+          ]
         },
         {
           "type": "paragraph",
@@ -118,20 +111,13 @@
           "text": "A single post could now:"
         },
         {
-          "type": "paragraph",
-          "text": "• Support multiple variations tailored for different contexts"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Each Variation can have reposts reposts"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Allow each variation and reposts to be shared by multiple advocates"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Include variation-level settings such as scheduling time and advocate selection, in addition to general post settings"
+          "type": "list",
+          "items": [
+            "Support multiple variations tailored for different contexts",
+            "Each Variation can have reposts reposts",
+            "Allow each variation and reposts to be shared by multiple advocates",
+            "Include variation-level settings such as scheduling time and advocate selection, in addition to general post settings"
+          ]
         },
         {
           "type": "paragraph",
@@ -156,28 +142,15 @@
           "text": "The content creation screen already contained several functional areas:"
         },
         {
-          "type": "paragraph",
-          "text": "• Post Settings"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Post editing"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Variations management"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Reposts management"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Distribution settings"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Post preview"
+          "type": "list",
+          "items": [
+            "Post Settings",
+            "Post editing",
+            "Variations management",
+            "Reposts management",
+            "Distribution settings",
+            "Post preview"
+          ]
         },
         {
           "type": "paragraph",
@@ -252,36 +225,25 @@
           "text": "✅ Strengths"
         },
         {
-          "type": "paragraph",
-          "text": "• Fast switching between variations"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Faster work flow"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Scales well as more metadata/features are added"
+          "type": "list",
+          "items": [
+            "Fast switching between variations",
+            "Faster work flow",
+            "Scales well as more metadata/features are added"
+          ]
         },
         {
           "type": "paragraph",
           "text": "⚠️ Weakness"
         },
         {
-          "type": "paragraph",
-          "text": "• Hierarchy between global settings and variations is less obvious"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Does not scale well when settings increase"
-        },
-        {
-          "type": "paragraph",
-          "text": "• 3-column layout can feel intimidating"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Source URL sits close to variation editor"
+          "type": "list",
+          "items": [
+            "Hierarchy between global settings and variations is less obvious",
+            "Does not scale well when settings increase",
+            "3-column layout can feel intimidating",
+            "Source URL sits close to variation editor"
+          ]
         },
         {
           "type": "heading",
@@ -302,24 +264,22 @@
           "text": "✅ Strengths"
         },
         {
-          "type": "paragraph",
-          "text": "• Very clear hierarchy (settings → variations)"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Easier for new users to understand"
+          "type": "list",
+          "items": [
+            "Very clear hierarchy (settings → variations)",
+            "Easier for new users to understand"
+          ]
         },
         {
           "type": "paragraph",
           "text": "⚠️ Weakness"
         },
         {
-          "type": "paragraph",
-          "text": "• Does not scale well when settings/variations variations increase"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Hard to scan"
+          "type": "list",
+          "items": [
+            "Does not scale well when settings/variations variations increase",
+            "Hard to scan"
+          ]
         },
         {
           "type": "heading",
@@ -340,24 +300,22 @@
           "text": "✅ Strengths"
         },
         {
-          "type": "paragraph",
-          "text": "• Clean separation between global and variaiton settings"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Familiar interaction pattern"
+          "type": "list",
+          "items": [
+            "Clean separation between global and variaiton settings",
+            "Familiar interaction pattern"
+          ]
         },
         {
           "type": "paragraph",
           "text": "⚠️ Weakness"
         },
         {
-          "type": "paragraph",
-          "text": "• Users must remember context"
-        },
-        {
-          "type": "paragraph",
-          "text": "• No simultaneous visibility"
+          "type": "list",
+          "items": [
+            "Users must remember context",
+            "No simultaneous visibility"
+          ]
         },
         {
           "type": "heading",
@@ -524,16 +482,12 @@
           "text": "Rather than simply displaying data, the redesign focused on helping teams quickly interpret performance. The experience was reorganized around the questions users naturally ask:"
         },
         {
-          "type": "paragraph",
-          "text": "• Is our advocacy program performing well?"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Which posts are driving engagement?"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Who are our most impactful advocates?"
+          "type": "list",
+          "items": [
+            "Is our advocacy program performing well?",
+            "Which posts are driving engagement?",
+            "Who are our most impactful advocates?"
+          ]
         },
         {
           "type": "heading",
@@ -544,16 +498,12 @@
           "text": "The new dashboard introduces a stronger visual hierarchy with three key sections:"
         },
         {
-          "type": "paragraph",
-          "text": "• Program performance highlighting ROI and overall reach"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Post analysis to surface high-performing content"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Advocate insights to identify the employees driving impact"
+          "type": "list",
+          "items": [
+            "Program performance highlighting ROI and overall reach",
+            "Post analysis to surface high-performing content",
+            "Advocate insights to identify the employees driving impact"
+          ]
         },
         {
           "type": "paragraph",
@@ -630,28 +580,23 @@
           "text": "The structural updates across the platform did more than improve usability. They drove measurable shifts in how admins used Ambo to grow their programs."
         },
         {
-          "type": "paragraph",
-          "text": "• Faster Content Creation: By simplifying the editing experience and adding AI writing directly into the drafting process, the average time to publish decreased by 40%."
-        },
-        {
-          "type": "paragraph",
-          "text": "• Higher Adoption of Advanced Features: With a clearer layout separating global settings from post variations, the creation of posts with multiple versions increased by over 35%. This proved that users will use advanced features when the setup is easy to understand."
+          "type": "list",
+          "items": [
+            "Faster Content Creation: By simplifying the editing experience and adding AI writing directly into the drafting process, the average time to publish decreased by 40%.",
+            "Higher Adoption of Advanced Features: With a clearer layout separating global settings from post variations, the creation of posts with multiple versions increased by over 35%. This proved that users will use advanced features when the setup is easy to understand."
+          ]
         },
         {
           "type": "heading",
           "text": "Key Takeaways"
         },
         {
-          "type": "paragraph",
-          "text": "• Guide the user instead of just adding features: As capabilities expanded, we focused on guiding the user's attention. We scaled advanced features without making the screen confusing or overwhelming."
-        },
-        {
-          "type": "paragraph",
-          "text": "• Make data actionable: By placing engagement numbers directly on the content workflow, we turned static charts into active workspaces. This closed the gap between seeing data and taking action."
-        },
-        {
-          "type": "paragraph",
-          "text": "• Solve the whole journey: Expanding our focus to the beginning of the process proved that removing barriers often means helping users find ideas, rather than just helping them publish."
+          "type": "list",
+          "items": [
+            "Guide the user instead of just adding features: As capabilities expanded, we focused on guiding the user's attention. We scaled advanced features without making the screen confusing or overwhelming.",
+            "Make data actionable: By placing engagement numbers directly on the content workflow, we turned static charts into active workspaces. This closed the gap between seeing data and taking action.",
+            "Solve the whole journey: Expanding our focus to the beginning of the process proved that removing barriers often means helping users find ideas, rather than just helping them publish."
+          ]
         },
         {
           "type": "heading",
@@ -743,12 +688,11 @@
           "text": "Beyond theming, other challenges emerged:"
         },
         {
-          "type": "paragraph",
-          "text": "• Overly complex naming — Tokens like discovery.body.white.accreditation were difficult to interpret and apply correctly."
-        },
-        {
-          "type": "paragraph",
-          "text": "• Engineer dependency — Token updates required manual involvement from developers, slowing down iteration and increasing the cost of change.Current theming workflow"
+          "type": "list",
+          "items": [
+            "Overly complex naming — Tokens like discovery.body.white.accreditation were difficult to interpret and apply correctly.",
+            "Engineer dependency — Token updates required manual involvement from developers, slowing down iteration and increasing the cost of change.Current theming workflow"
+          ]
         },
         {
           "type": "heading",
@@ -769,44 +713,27 @@
           "text": "Our design goals:"
         },
         {
-          "type": "paragraph",
-          "text": "• Support theming at multiple levels starting from component to layout to page."
-        },
-        {
-          "type": "paragraph",
-          "text": "• Simplify theming for designers"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Improve maintainability for design and engineering"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Support flexible brand expressions without bloating token files"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Preserve accessibility"
+          "type": "list",
+          "items": [
+            "Support theming at multiple levels starting from component to layout to page.",
+            "Simplify theming for designers",
+            "Improve maintainability for design and engineering",
+            "Support flexible brand expressions without bloating token files",
+            "Preserve accessibility"
+          ]
         },
         {
           "type": "paragraph",
           "text": "We explored multiple concepts, eventually narrowing down to the model named on core pricipal One Surface, One Theme"
         },
         {
-          "type": "paragraph",
-          "text": "• A theme is centered on a single surface (background)"
-        },
-        {
-          "type": "paragraph",
-          "text": "• All associated foreground tokens are designed to work in harmony with that background"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Every scalable component should by default use the theme background color"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Exceptions allowed only for smaller interaction components like buttons or action bars"
+          "type": "list",
+          "items": [
+            "A theme is centered on a single surface (background)",
+            "All associated foreground tokens are designed to work in harmony with that background",
+            "Every scalable component should by default use the theme background color",
+            "Exceptions allowed only for smaller interaction components like buttons or action bars"
+          ]
         },
         {
           "type": "heading",
@@ -867,12 +794,11 @@
           "text": "The Semantic color tokens are further categorised into two groups"
         },
         {
-          "type": "paragraph",
-          "text": "• Core Tokens: General-purpose tokens shared across instances. Includes all color tokens for generic use case, utility, interactions and feedbacks."
-        },
-        {
-          "type": "paragraph",
-          "text": "• Contextual Tokens: Specific tokens tailored to specific use cases"
+          "type": "list",
+          "items": [
+            "Core Tokens: General-purpose tokens shared across instances. Includes all color tokens for generic use case, utility, interactions and feedbacks.",
+            "Contextual Tokens: Specific tokens tailored to specific use cases"
+          ]
         },
         {
           "type": "heading",
@@ -1021,24 +947,14 @@
           "text": "This new model has led to several key improvements:"
         },
         {
-          "type": "paragraph",
-          "text": "• A new BI file that support theming at multiple levels starting from component to layout to page preserving accessibility"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Significantly reduced the number of tokens by eliminating duplication"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Cut down engineering effort to nearly zero. Designers can now create or test new color expressions without engineering support."
-        },
-        {
-          "type": "paragraph",
-          "text": "• Brought clarity to token structure and naming, with 85% of tokens correctly mapped by designers during testing"
-        },
-        {
-          "type": "paragraph",
-          "text": "• Strengthened accessibility by keeping surface–foreground pairings tightly scoped and intentional"
+          "type": "list",
+          "items": [
+            "A new BI file that support theming at multiple levels starting from component to layout to page preserving accessibility",
+            "Significantly reduced the number of tokens by eliminating duplication",
+            "Cut down engineering effort to nearly zero. Designers can now create or test new color expressions without engineering support.",
+            "Brought clarity to token structure and naming, with 85% of tokens correctly mapped by designers during testing",
+            "Strengthened accessibility by keeping surface–foreground pairings tightly scoped and intentional"
+          ]
         },
         {
           "type": "paragraph",
