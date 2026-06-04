@@ -5,7 +5,7 @@
       "slug": "building-ambo",
       "year": "2026",
       "image": "Assets/ambo-01.png",
-      "description": "Transforming an early-stage employee advocacy platform from a simple post-sharing tool into a flexible content distribution system. Redefining content workflows for scale.",
+      "description": "Transforming an early-stage employee advocacy platform from a simple post-sharing tool into a flexible content distribution system.",
       "tags": [
         "product design",
         "ux",
@@ -1403,8 +1403,8 @@
         {
           "type": "embed",
           "src": "https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTGmpBE3bhQauG6oKbDGfT0%2FSubscription-flow-final%3Fnode-id%3D4%253A2%26viewport%3D431%252C241%252C0.18867097795009613%26scaling%3Dmin-zoom",
-          "title": "Figma prototype",
-          "caption": ""
+          "caption": "",
+          "title": "Figma prototype"
         },
         {
           "type": "paragraph",
