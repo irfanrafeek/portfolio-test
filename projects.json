@@ -1661,6 +1661,223 @@
           "text": "While we didn’t get everything right along the way, our pragmatic approach to building the new design system enabled us to address issues quickly and, ultimately, be confident that the system we've designed is something the company can rely on for the years to come."
         }
       ]
+    },
+    {
+      "title": "Asista Redesign",
+      "slug": "asista-redesign",
+      "year": "2019",
+      "image": "Assets/asista-13.png",
+      "description": "Redesigning Asista — an intelligent customer-support ticketing platform built for cross-functional, collaborative service teams.",
+      "tags": [
+        "product design",
+        "ux",
+        "redesign"
+      ],
+      "featured": false,
+      "blocks": [
+        {
+          "type": "image",
+          "src": "Assets/asista-01.gif",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "heading",
+          "text": "Asista"
+        },
+        {
+          "type": "paragraph",
+          "text": "Asista is an intelligent customer-support ticketing software designed to be cross-functional, collaborative & socially-intelligent. Asista is built with a singular thought of making the largely multi-dimensional task of assistance simple. Few of Asista's clients include Bsnl, Kalyan jewellers, Kannur airport."
+        },
+        {
+          "type": "heading",
+          "text": "Problems"
+        },
+        {
+          "type": "paragraph",
+          "text": "Asista is a great product. With more features and functionalities added over the years, it accumulated technical and design debt. It became difficult to maintain and support. The product didn’t have a clear information hierarchy, which made the new design decisions hard. The overall user experience was inconsistent. Also, the existing design was completely out of scope for scalability."
+        },
+        {
+          "type": "heading",
+          "text": "Design Goals"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Define a design language for Asista ticketing system.",
+            "Make product intuitive and reduce the learning curve.",
+            "Defining a proper Information Architecture.",
+            "Bring visual consistency across product.",
+            "Introduce product to international market."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Information Architecture & Layout"
+        },
+        {
+          "type": "paragraph",
+          "text": "Before jumping into the interface design, we first tackled the structure. Defining hierarchy was one of the major challenges for redesign. Actions were scattered across the screen, making it hard for users to navigate or prioritize. Defined a clear Information Architecture and brought all information and actions as per the IA. Also, the intention was to build a scalable system that can accommodate all future features that the app may need to add in the feature."
+        },
+        {
+          "type": "image",
+          "src": "Assets/asista-02.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "heading",
+          "text": "Design Language & Color Palette"
+        },
+        {
+          "type": "paragraph",
+          "text": "The original brand color, orange, posed multiple challenges. Beyond creating confusion when used alongside status indicators, it also didn’t align well with the brand’s identity and long-term vision. To address this, we introduced violet as the new brand color, bringing a sense of distinction, maturity, and clarity."
+        },
+        {
+          "type": "paragraph",
+          "text": "Since customer support agents spend long hours on the platform, we avoided vibrant, high-saturation colors that could cause visual fatigue. Instead, the interface was designed around a clean, white canvas with a soft shade of violet as the accent, ensuring both visual harmony and accessibility. All text and components were tested for contrast to guarantee readability and compliance with accessibility standards."
+        },
+        {
+          "type": "image",
+          "src": "Assets/asista-03.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "With new colours we made the whole screen white and clean. Made sure the accessibility of all elements. Passed every text and components through the color contrast test."
+        },
+        {
+          "type": "image",
+          "src": "Assets/asista-04.png",
+          "alt": "",
+          "caption": "Asista ticket listing page"
+        },
+        {
+          "type": "heading",
+          "text": "Grid for Asista"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Primary and secondary navigation remained fixed while the workspace area changed respectively to the device. The grid used was 12 columns with a gutter of 16px. The column width varies as per the device width whereas the gutter width stays fixed to 16px."
+        },
+        {
+          "type": "image",
+          "src": "Assets/asista-05.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "heading",
+          "text": "Asista UI Components"
+        },
+        {
+          "type": "paragraph",
+          "text": "Verified accessibility of all elements in the design system. Components were made in such a way that it can be reused on multiple occasions, thus reducing the development effort. Made sure that every action holds enough clickable space."
+        },
+        {
+          "type": "image",
+          "src": "Assets/asista-06.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "heading",
+          "text": "Ticket listing page"
+        },
+        {
+          "type": "paragraph",
+          "text": "This is the landing page in Asista. From the feedback of users, we understood that they found the old design of the ticket listing page non-intuitive. There was no proper Information Architecture. Actions including ticket filter, pick ticket, search, advanced search were fragmented across the screen with no proper hierarchy."
+        },
+        {
+          "type": "image",
+          "src": "Assets/asista-07.png",
+          "alt": "",
+          "caption": "Asista old ticket listing page"
+        },
+        {
+          "type": "paragraph",
+          "text": "After numerous design explorations, we came up with this clean and minimal workspace design. Defined Information Architecture clearly and redesigned screens based on hierarchy. Based on user feedback, we understood that there were a set of frequent actions agents performed do often in ticket detail page. We introduced inspector and now actions like assigning tickets, setting ticket priority which was part of ticket detail page can be done from the listing page itself."
+        },
+        {
+          "type": "image",
+          "src": "Assets/asista-08.png",
+          "alt": "",
+          "caption": "Asista new ticket listing page"
+        },
+        {
+          "type": "heading",
+          "text": "The Ticket details"
+        },
+        {
+          "type": "paragraph",
+          "text": "The ticket listing page was too cluttered. The hierarchy was not conveyed clearly. Information and actions of a single ticket were spread across screens. Also, there was no scope to add a new extension or details for a ticket in the existing ticket detail page."
+        },
+        {
+          "type": "image",
+          "src": "Assets/asista-09.png",
+          "alt": "",
+          "caption": "Old Asista ticket detail screen"
+        },
+        {
+          "type": "paragraph",
+          "text": "The whole layout got changed. Introduced new features to add persons to the ticket chatroom. Only the essential details will be shown on the surface. Thus we made the screen cleaner. Shifted all the edit options and further details to the aside space. Also, we redefined the experience for commenting and replying to the ticket."
+        },
+        {
+          "type": "heading",
+          "text": "Reports"
+        },
+        {
+          "type": "paragraph",
+          "text": "Accessibility was poor across screens. There was not enough clickable space. Also, actions to generate and download reports were not intuitive. Page naming was not consistent across the platform."
+        },
+        {
+          "type": "image",
+          "src": "Assets/asista-10.png",
+          "alt": "",
+          "caption": "Report old UI"
+        },
+        {
+          "type": "paragraph",
+          "text": "Improved the whole experience of the page. Improved click affordability for each item. Made generate and preview intuitive and consistent across pages. They will stay sticky while the items will be scrollable in the preview space."
+        },
+        {
+          "type": "image",
+          "src": "Assets/asista-11.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "heading",
+          "text": "Knowledge Base"
+        },
+        {
+          "type": "paragraph",
+          "text": "The old Knowledge Base was scattered and lacked structure, making it hard for users to find the right information. In the redesign, we introduced a clear hierarchy, intuitive categories. Articles now follow a consistent template, supported by a clean, modular layout for easy scanning and reading."
+        },
+        {
+          "type": "image",
+          "src": "Assets/asista-12.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "heading",
+          "text": "Highlights"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Asista redesign streamlined the product experience end-to-end. Every decision, from visual language to component behavior, was made with clarity, usability, and scalability in mind. We simplified workflows, and introduced a robust design system that not only serves current users but sets the foundation for future growth."
+        },
+        {
+          "type": "paragraph",
+          "text": "The transition from a fragmented experience to a cohesive, well-structured system has cut onboarding time for new users by 40% and accelerated feature delivery through a scalable, reusable design system. The clear information architecture and intuitive workflows significantly improved agent efficiency."
+        },
+        {
+          "type": "paragraph",
+          "text": "This redesign marks a significant step forward in Asista’s journey — one that reflects its maturity as a product and its readiness to serve a broader, more global audience."
+        }
+      ]
     }
   ]
 }
