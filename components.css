@@ -934,6 +934,30 @@ a.project-card {
     color: var(--semantic-color-interactive-primary);
 }
 
+/* Ordered (numbered) list — same indent/spacing as bulleted; marker shows numbers */
+.case-list--ordered {
+    list-style-type: decimal;
+}
+
+/* Iframe embed (Figma prototypes, video players, etc.) */
+.case-embed {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--semantic-radius-md);
+    overflow: hidden;
+    border: 1px solid var(--semantic-color-border-primary);
+    background-color: var(--semantic-color-background-secondary);
+}
+
+.case-embed__frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 /* Image carousel — transform-based slider with prev/next controls */
 .case-gallery {
     margin: var(--semantic-spacing-md) 0;

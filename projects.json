@@ -1269,6 +1269,179 @@
           "text": "This new system not only strengthens design consistency but also bridges design and engineering workflows creating a cleaner, more scalable, and more predictable design foundation for the future."
         }
       ]
+    },
+    {
+      "title": "Revamping conventional subscription flows",
+      "slug": "revamping-conventional-subscription-flows",
+      "year": "2020",
+      "image": "Assets/subs-08.jpg",
+      "description": "Redesigning the subscription onboarding flow for digital publishers — reducing drop-off by removing friction at the critical moments before checkout.",
+      "tags": [
+        "product design",
+        "ux",
+        "subscriptions"
+      ],
+      "featured": false,
+      "blocks": [
+        {
+          "type": "image",
+          "src": "Assets/subs-01.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "heading",
+          "text": "Subscription"
+        },
+        {
+          "type": "paragraph",
+          "text": "A digital subscription provides access to content on your website. Each subscription offers a different level of access which can be duration based, or content-specific."
+        },
+        {
+          "type": "heading",
+          "text": "Problems with our current Subscription flow"
+        },
+        {
+          "type": "paragraph",
+          "text": "The subscription action started from the subscription listing page. The steps included in purchasing a subscription were"
+        },
+        {
+          "type": "numbered_list",
+          "items": [
+            "Choose the subscription from the given list",
+            "Do payment via any of the payment gateways available"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "This model was purely based on the concept of optimizing the number of steps for subscription purchases."
+        },
+        {
+          "type": "image",
+          "src": "Assets/subs-02.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "image",
+          "src": "Assets/subs-03.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "Even though the number of steps was less, we observed a large number of user drop-offs between the login and payment screens. On further research, we identified the following problems;"
+        },
+        {
+          "type": "numbered_list",
+          "items": [
+            "Users lost context upon logging in: There was no plan confirmation screen, and users often lost track of which plan they had chosen, during the purchase journey itself. This was particularly in the case of users who revisited the screens after a break.",
+            "Users sometimes questioned the reason for login. Log in was seen as an unnecessary prompt before subscription.",
+            "Users dropped out due to login/signup failures before they could reach the subscription payment screen."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Steps taken:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Research: We studied different publisher websites, and observed metrics related to subscription flows. Being transparent with the user stood out as a best practice. All effective working models intimated users beforehand about the steps to be followed to buy a subscription."
+        },
+        {
+          "type": "image",
+          "src": "Assets/subs-04.png",
+          "alt": "",
+          "caption": "screen grabs of few publishers on how the login for subscription is done"
+        },
+        {
+          "type": "paragraph",
+          "text": "On the basis of these findings, I created a wireflow and prototype."
+        },
+        {
+          "type": "image",
+          "src": "Assets/subs-05.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "heading",
+          "text": "Testing the prototype:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Upon testing the above prototype with various personas, it yielded better results than our current model."
+        },
+        {
+          "type": "paragraph",
+          "text": "However, the login functionality was still a barrier for those who wanted to get started with subscriptions. Some users questioned the credibility of the login module and were not comfortable providing login details/credentials. Others dropped off due to failures like wrong OTP."
+        },
+        {
+          "type": "paragraph",
+          "text": "Login served as an impediment to the subscription flow, with but one benefit - gathering verified log in credentials helped us easily reach out to customers, subsequently. Was this worth the number of drop offs that the module was guaranteeing? We think NO."
+        },
+        {
+          "type": "paragraph",
+          "text": "After numerous design explorations, we came up with the below design flow where the login/signup module came after subscription."
+        },
+        {
+          "type": "image",
+          "src": "Assets/subs-06.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "image",
+          "src": "Assets/subs-07.png",
+          "alt": "",
+          "caption": "Subscription flow for the non logged-in user"
+        },
+        {
+          "type": "paragraph",
+          "text": "With this design, our goal was to make the user to customer conversion as instant as possible. Once the decision of purchase is made by the user, we tried to avoid any roadblocks that may lead to a second thought. We took the Login/Signup after the checkout process. This helps us to reduce the steps/time for the subscription purchase and convert the user to the customer at the first moment of truth."
+        },
+        {
+          "type": "embed",
+          "src": "https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTGmpBE3bhQauG6oKbDGfT0%2FSubscription-flow-final%3Fnode-id%3D4%253A2%26viewport%3D431%252C241%252C0.18867097795009613%26scaling%3Dmin-zoom",
+          "title": "Figma prototype",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "The prototype flow without login, by just getting the email id from user"
+        },
+        {
+          "type": "paragraph",
+          "text": "The only possibility for the user to drop off from this subscription flow would be to enter the wrong email id. We are hence confirming the email ID once more in this flow. Upon successful payment, an email is sent to the provided ID. Users can either use the hyperlink specified in the email to sign-up directly or they can signup/login with the given email ID to avail the subscription."
+        },
+        {
+          "type": "paragraph",
+          "text": "Now we conducted usability tests on this prototype and received positive feedback from users. It outperformed the earlier two versions, offering a flow that is simple, functional, and easy to understand."
+        },
+        {
+          "type": "paragraph",
+          "text": "Key benefits:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "~32% improvement in subscription completion rate over the original flow.",
+            "~14% reduction in drop-offs compared to the improved prototype with login upfront.",
+            "Only ~3–4% of users made incorrect email input, which was mitigated with a confirmation step."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Key findings:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Be transparent with your user when the user flow involves payment or collecting any sort of user information. Make the steps simple and understandable rather than reducing the number of clicks.",
+            "Define your product goals first, and structure the user journey to support them — even if that means adding a step or two."
+          ]
+        }
+      ]
     }
   ]
 }

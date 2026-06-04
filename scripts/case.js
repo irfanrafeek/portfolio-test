@@ -42,6 +42,23 @@
                     .join('');
                 return `<ul class="case-list">${items}</ul>`;
             }
+            case 'numbered_list': {
+                const items = (Array.isArray(block.items) ? block.items : [])
+                    .map((item) => `<li class="case-list-item">${escapeHtml(item)}</li>`)
+                    .join('');
+                return `<ol class="case-list case-list--ordered">${items}</ol>`;
+            }
+            case 'embed': {
+                if (!block.src) return '';
+                const title = block.title || 'Embedded content';
+                return `
+                    <figure class="case-figure">
+                        <div class="case-embed">
+                            <iframe class="case-embed__frame" src="${escapeHtml(block.src)}" title="${escapeHtml(title)}" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        ${block.caption ? `<figcaption class="case-caption">${escapeHtml(block.caption)}</figcaption>` : ''}
+                    </figure>`;
+            }
             case 'gallery': {
                 const items = Array.isArray(block.items) ? block.items : [];
                 if (!items.length) return '';
