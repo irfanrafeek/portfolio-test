@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: irfanrafeek/portfolio-test
+  repo: irfanrafeek/irfanrafeek.github.io
   branch: main
 
 # Images uploaded in the CMS land in Assets/ and are referenced relative to the site root.
