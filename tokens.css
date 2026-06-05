@@ -301,8 +301,8 @@
   --semantic-type-article-body-line-height: var(--primitive-line-height-relaxed);
 
   --semantic-type-article-summary-font-family: var(--semantic-font-sans);
-  --semantic-type-article-summary-font-size: var(--primitive-font-size-xl);    /* 26px */
-  --semantic-type-article-summary-line-height: var(--primitive-line-height-snug);
+  --semantic-type-article-summary-font-size: var(--primitive-font-size-lg);    /* 26px */
+  --semantic-type-article-summary-line-height: var(--primitive-line-height-normal);
 
   --semantic-type-article-quote-font-family: var(--semantic-font-serif);
   --semantic-type-article-quote-font-size: var(--primitive-font-size-xl);      /* 26px */
@@ -403,7 +403,7 @@
      (.container, .container--narrow) rather than ad-hoc overrides. */
   --semantic-layout-container-max-width-default: 1200px;
   --semantic-layout-container-max-width-narrow: 1000px;
-  --semantic-layout-container-max-width-reading: 736px;  /* optimal line length for long-form article/prose */
+  --semantic-layout-container-max-width-reading: 672px;  /* optimal line length for long-form article/prose */
 }
 
 /* DARK MODE */
@@ -500,7 +500,7 @@
   :root {
     --semantic-type-article-small-font-size: var(--primitive-font-size-sm);     /* 14px */
     --semantic-type-article-body-font-size: var(--primitive-font-size-md);      /* 18px */
-    --semantic-type-article-summary-font-size: var(--primitive-font-size-xl-sm);/* 22px */
+    --semantic-type-article-summary-font-size: var(--primitive-font-size-md);/* 22px */
     --semantic-type-article-quote-font-size: var(--primitive-font-size-xl-sm);  /* 22px */
     --semantic-type-article-heading-font-size: var(--primitive-font-size-xl);   /* 26px */
     --semantic-type-article-title-font-size: var(--primitive-font-size-4xl-sm); /* 38px */
