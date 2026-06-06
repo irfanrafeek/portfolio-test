@@ -117,3 +117,102 @@ collections:
                       - { name: src, label: "Embed URL", widget: string, hint: "Full URL to embed (e.g. https://www.figma.com/embed?...)" }
                       - { name: title, label: "Title (for accessibility)", widget: string, required: false }
                       - { name: caption, label: "Caption", widget: string, required: false }
+      - name: writings
+        label: "Writings"
+        file: "writings.json"
+        format: json
+        description: "Short pieces shown on the Writing page."
+        fields:
+          - name: writings
+            label: "Writings"
+            label_singular: "Writing"
+            widget: list
+            summary: "{{fields.title}} ({{fields.year}})"
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - name: slug
+                label: "Slug"
+                widget: string
+                hint: "URL id for the writing, e.g. spacing-components-in-design-systems (lowercase, dashes)"
+                pattern: ["^[a-z0-9-]+$", "Use lowercase letters, numbers, and dashes only"]
+              - { name: year, label: "Year", widget: string }
+              - name: image
+                label: "Image"
+                widget: string
+                hint: "Image path like Assets/spc-01.png"
+              - { name: description, label: "Card description", widget: text }
+              - name: tags
+                label: "Tags"
+                widget: list
+                default: []
+                field: { name: tag, label: "Tag", widget: string }
+              - name: featured
+                label: "Show on Writing page"
+                widget: boolean
+                default: true
+              - name: blocks
+                label: "Writing Sections"
+                label_singular: "Section"
+                widget: list
+                default: []
+                types:
+                  - name: heading
+                    label: "Heading"
+                    summary: "Heading: {{fields.text}}"
+                    fields:
+                      - { name: text, label: "Text", widget: string }
+                  - name: paragraph
+                    label: "Paragraph"
+                    summary: "{{fields.text}}"
+                    fields:
+                      - { name: text, label: "Text", widget: text }
+                  - name: image
+                    label: "Image"
+                    summary: "Image: {{fields.src}}"
+                    fields:
+                      - { name: src, label: "Image", widget: image }
+                      - { name: alt, label: "Alt text", widget: string, required: false }
+                      - { name: caption, label: "Caption", widget: string, required: false }
+                  - name: quote
+                    label: "Quote"
+                    summary: "Quote: {{fields.text}}"
+                    fields:
+                      - { name: text, label: "Quote", widget: text }
+                      - { name: attribution, label: "Attribution", widget: string, required: false }
+                  - name: list
+                    label: "Bulleted list"
+                    summary: "List ({{fields.items.length}} items)"
+                    fields:
+                      - name: items
+                        label: "Items"
+                        widget: list
+                        default: []
+                        field: { name: item, label: "Item", widget: string }
+                  - name: numbered_list
+                    label: "Numbered list"
+                    summary: "Numbered list ({{fields.items.length}} items)"
+                    fields:
+                      - name: items
+                        label: "Items"
+                        widget: list
+                        default: []
+                        field: { name: item, label: "Item", widget: string }
+                  - name: gallery
+                    label: "Image carousel"
+                    summary: "Carousel ({{fields.items.length}} images)"
+                    fields:
+                      - name: items
+                        label: "Images"
+                        widget: list
+                        default: []
+                        fields:
+                          - { name: src, label: "Image", widget: image }
+                          - { name: alt, label: "Alt text", widget: string, required: false }
+                          - { name: caption, label: "Caption", widget: string, required: false }
+                  - name: embed
+                    label: "Embed (Figma, etc.)"
+                    summary: "Embed: {{fields.src}}"
+                    fields:
+                      - { name: src, label: "Embed URL", widget: string }
+                      - { name: title, label: "Title (for accessibility)", widget: string, required: false }
+                      - { name: caption, label: "Caption", widget: string, required: false }

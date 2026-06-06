@@ -1,7 +1,10 @@
-// Renders project cards from projects.json into any element with [data-projects].
+// Renders project / writing cards from a JSON file into any element with [data-projects].
 // Usage in markup:
-//   <div class="projects-grid" data-projects></div>              -> all projects
-//   <div class="projects-grid" data-projects="featured"></div>   -> only featured ones
+//   <div class="projects-grid" data-projects></div>
+//   <div class="projects-grid" data-projects="featured"></div>
+// Optional attributes:
+//   data-source="writings.json"    -> swap the data file (default: projects.json)
+//   data-target="writing.html"     -> swap the card link target (default: case.html)
 (function () {
     function escapeHtml(value) {
         return String(value)
@@ -22,16 +25,16 @@
         return escapeHtml(value);
     }
 
-    function renderCard(project) {
+    function renderCard(project, target) {
         const tags = Array.isArray(project.tags) ? project.tags : [];
         const tagsHtml = tags
             .map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`)
             .join('');
 
-        // A card with a slug links to its case study; otherwise it stays a plain block.
+        // A card with a slug links to its article; otherwise it stays a plain block.
         const slug = (project.slug || '').trim();
         const tag = slug ? 'a' : 'div';
-        const href = slug ? ` href="case.html?slug=${encodeURIComponent(slug)}"` : '';
+        const href = slug ? ` href="${escapeHtml(target)}?slug=${encodeURIComponent(slug)}"` : '';
 
         return `
             <${tag} class="project-card"${href}>
@@ -47,28 +50,39 @@
             </${tag}>`;
     }
 
+    // Cache fetched data files so multiple grids sharing the same source only hit the network once.
+    const _cache = new Map();
+    async function loadItems(source) {
+        if (_cache.has(source)) return _cache.get(source);
+        const res = await fetch(source, { cache: 'no-cache' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        // Accept any top-level key (projects, writings, items, ...) or a raw array.
+        const items = Array.isArray(data)
+            ? data
+            : (Object.values(data).find(Array.isArray) || []);
+        _cache.set(source, items);
+        return items;
+    }
+
     async function init() {
         const grids = document.querySelectorAll('[data-projects]');
         if (!grids.length) return;
 
-        let projects;
-        try {
-            const res = await fetch('projects.json', { cache: 'no-cache' });
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            const data = await res.json();
-            projects = Array.isArray(data) ? data : data.projects || [];
-        } catch (err) {
-            console.error('Could not load projects.json:', err);
-            return;
-        }
-
-        grids.forEach((grid) => {
+        for (const grid of grids) {
+            const source = grid.getAttribute('data-source') || 'projects.json';
+            const target = grid.getAttribute('data-target') || 'case.html';
             const mode = grid.getAttribute('data-projects');
-            const list = mode === 'featured'
-                ? projects.filter((p) => p.featured)
-                : projects;
-            grid.innerHTML = list.map(renderCard).join('');
-        });
+            let items;
+            try {
+                items = await loadItems(source);
+            } catch (err) {
+                console.error(`Could not load ${source}:`, err);
+                continue;
+            }
+            const list = mode === 'featured' ? items.filter((p) => p.featured) : items;
+            grid.innerHTML = list.map((item) => renderCard(item, target)).join('');
+        }
     }
 
     if (document.readyState === 'loading') {

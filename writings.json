@@ -1,0 +1,410 @@
+{
+  "writings": [
+    {
+      "title": "Spacing components in Design Systems",
+      "slug": "spacing-components-in-design-systems",
+      "year": "2024",
+      "image": "Assets/spc-01.png",
+      "description": "On building consistent, scalable spacing systems for components — and why most teams get it backwards.",
+      "tags": [
+        "design systems",
+        "spacing",
+        "tokens"
+      ],
+      "featured": true,
+      "blocks": [
+        {
+          "type": "image",
+          "src": "Assets/spc-01.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "Spacing might seem simple, but it’s one of the most powerful tools in creating clear, consistent, and visually balanced interfaces. In design systems, however, managing spacing—especially for reusable components, often turns into a frustrating puzzle for designers and developers alike. So how do we keep things consistent without sacrificing flexibility? This article explores key principles to consider when defining spacing for components in a design system."
+        },
+        {
+          "type": "heading",
+          "text": "Understanding Spacing: Margin vs. Padding"
+        },
+        {
+          "type": "paragraph",
+          "text": "Before we delve into best practices, it's essential to clarify two core concepts:"
+        },
+        {
+          "type": "heading",
+          "text": "Margin"
+        },
+        {
+          "type": "list",
+          "items": [
+            "What it is: Margin is the space outside an element.",
+            "Purpose: It defines the space between that element and adjacent elements.",
+            "Use case: Often used to create separation between components at the layout level."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Padding"
+        },
+        {
+          "type": "list",
+          "items": [
+            "What it is: Padding is the space inside an element.",
+            "Purpose: It defines the space between the element’s content and its border.",
+            "Use case: Should be used to provide breathing room inside components, especially when they have a background color or border"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Avoid Outer Spacing in Reusable Components"
+        },
+        {
+          "type": "paragraph",
+          "text": "One of the most common mistakes in design systems is assigning outer spacing (margin/padding) to reusable components. While it might seem convenient at first, this approach often leads to layout rigidity and inconsistency."
+        },
+        {
+          "type": "image",
+          "src": "Assets/spc-02.jpg",
+          "alt": "",
+          "caption": "An example when a card component has a fixed margin built into it, placing multiple cards within a new layout—like a grid or list—can lead to unintended extra spacing. Since the margin is baked into the card itself, it becomes difficult for the parent layout to control or adjust spacing between cards, often resulting in inconsistent gaps or layout misalignment."
+        },
+        {
+          "type": "paragraph",
+          "text": "Important Guideline Avoid using padding unless the element has a background or border. Padding makes sense only when it helps define the visual bounds of a component."
+        },
+        {
+          "type": "heading",
+          "text": "Why Outer Spacing is Problematic"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Unpredictable Layouts: Components with built-in margins push against each other or their containers, making layout behavior harder to predict.",
+            "Lack of Flexibility: The same component may need different spacing depending on its placement or context.",
+            "Difficult Overrides: Margins defined within components are often hard to override cleanly at the parent level."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Embrace Layout-Driven Spacing"
+        },
+        {
+          "type": "paragraph",
+          "text": "The preferred strategy is to remove all outer spacing from reusable components and define spacing only at the layout (or parent) level."
+        },
+        {
+          "type": "heading",
+          "text": "Use gap for Layout Spacing"
+        },
+        {
+          "type": "paragraph",
+          "text": "Modern CSS offers the gap property, which is ideal for managing spacing between elements within a container. It provides a cleaner, more intuitive, and maintainable approach compared to manually setting margins on individual elements. It closely mirrors how designers define spacing between layers in tools like Figma."
+        },
+        {
+          "type": "image",
+          "src": "Assets/spc-03.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "list",
+          "items": [
+            "Works with flex, grid, and multi-column layouts.",
+            "Eliminates the need for “last-child” margin hacks.",
+            "Keeps the component logic simple and reusable."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Benefits of Layout-Based Spacing"
+        },
+        {
+          "type": "heading",
+          "text": "1. Greater Spacing Flexibility"
+        },
+        {
+          "type": "paragraph",
+          "text": "By centralizing spacing at the layout level, you can:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Adjust spacing based on screen size or context.",
+            "Apply spacing tokens dynamically based on design needs.",
+            "Create reusable layout containers (e.g., stacks or insets) that enforce spacing rules."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. Component Reusability"
+        },
+        {
+          "type": "paragraph",
+          "text": "A single component can be used in multiple contexts without having to redefine or override its spacing behavior. This keeps components truly atomic and portable."
+        },
+        {
+          "type": "heading",
+          "text": "3. Cleaner Code and Token Usage"
+        },
+        {
+          "type": "paragraph",
+          "text": "Using spacing tokens at the layout level ensures consistent rhythm across the system. It also makes it easier for designers and developers to reason about space relationships."
+        },
+        {
+          "type": "heading",
+          "text": "Handling Complex Components"
+        },
+        {
+          "type": "paragraph",
+          "text": "What about components that require dynamic spacing internally—those that change based on conditionally rendered sub-elements?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Take the example of a Story Card component, which can include elements like a rubric, title, description, byline, and date. If spacing is managed using fixed margins and padding, enabling or disabling these elements could cause the internal spacing to shift unpredictably."
+        },
+        {
+          "type": "image",
+          "src": "Assets/spc-04.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "The example above illustrates how the outer spacing of the same Story Card shifts when different combinations of elements are toggled on or off through component properties."
+        },
+        {
+          "type": "heading",
+          "text": "Structure First, Then Space"
+        },
+        {
+          "type": "paragraph",
+          "text": "One easy way to space elements within complex components, apply Gestalt’s Law of Proximity to guide grouping. Elements placed closer together are perceived as related. This principle helps inform both the structure of the component and the thoughtful use of gap between groups."
+        },
+        {
+          "type": "image",
+          "src": "Assets/spc-05.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "The example above shows how internal spacing within the same Story Card can be managed using gap (space-between) instead of fixed padding or margins. With gap, the spacing isn’t tied to any specific element—it exists only between elements. This means if an element is removed, the corresponding space automatically disappears, keeping the layout clean and consistent."
+        },
+        {
+          "type": "numbered_list",
+          "items": [
+            "Group related elements: Identify which sub-elements are visually and functionally connected, and wrap them in internal layout containers (e.g., vertical stacks, horizontal groups). Use gap to create consistent spacing within these groups.",
+            "Use padding only when needed: Apply padding inside a component only when it has a background color or border to create internal breathing room.",
+            "Avoid fixed margins: Do not define external margins within components. Allow the parent layout to control spacing between components for better flexibility and consistency."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Conclusion"
+        },
+        {
+          "type": "paragraph",
+          "text": "Designing scalable spacing in a design system starts with the separation of component structure and layout responsibility. Components should focus on their own internal alignment and content padding, leaving external spacing to the parent layout."
+        },
+        {
+          "type": "paragraph",
+          "text": "By using modern CSS tools like gap and adopting layout-driven spacing strategies, your design system can gain:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Consistency",
+            "Flexibility",
+            "Maintainability"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "This results in cleaner components, fewer overrides, and a smoother collaboration between design and engineering."
+        }
+      ]
+    },
+    {
+      "title": "Improving Accessibility for Overlay Cards in Verso",
+      "slug": "improving-accessibility-for-verso-overlay-cards",
+      "year": "2023",
+      "image": "Assets/acc-04.jpg",
+      "description": "How we improved the contrast and readability of overlay cards in Verso without sacrificing the brand's visual character.",
+      "tags": [
+        "accessibility",
+        "design systems",
+        "color"
+      ],
+      "featured": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The Overlay Story Card is a widely used design pattern across multiple brands including Vogue, Bon Appétit, GQ and Traveller. It has an image background with a dark gradient overlay, topped with a story title, metadata, and sometimes a byline. It’s a visually engaging layout, but without careful attention to contrast, alignment, and image balance, it can harm accessibility and usability."
+        },
+        {
+          "type": "paragraph",
+          "text": "This article explains how I identified key problems, what changes we made, and the color contrast theory that informed those changes."
+        },
+        {
+          "type": "heading",
+          "text": "The Problem"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Overlay Story Card is a design pattern where a story title and details are placed on top of an image with a black gradient overlay."
+        },
+        {
+          "type": "image",
+          "src": "Assets/acc-01.png",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "In the current implementation:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The background overlay takes fixed height from bottom, fading from 80% black to 0% from bottom to a fixed height.",
+            "This style is used in several recirculation list and story collection components across our brands."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "However, during an accessibility review, it became clear that critical improvements were needed."
+        },
+        {
+          "type": "heading",
+          "text": "My role"
+        },
+        {
+          "type": "paragraph",
+          "text": "My role was to identify the accessibility gaps, propose a solution for improving text legibility, and work closely with design and engineering teams to bring the changes into the Verso Design System. I ensured the final implementation balanced accessibility standards with the visual expression of brands like Vogue, Bon Appétit, and GQ."
+        },
+        {
+          "type": "heading",
+          "text": "Identifying the Issues"
+        },
+        {
+          "type": "heading",
+          "text": "1. Legibility Problems"
+        },
+        {
+          "type": "paragraph",
+          "text": "On smaller screens, the gradient fades too quickly, reducing opacity near the top."
+        },
+        {
+          "type": "paragraph",
+          "text": "Since the story title gets placed towards the top/middle of the image, the text often overlaps with lighter areas of the background image, making it harder to read and failing accessibility contrast checks."
+        },
+        {
+          "type": "heading",
+          "text": "2. Image Visibility Loss"
+        },
+        {
+          "type": "paragraph",
+          "text": "The rubric, title, and byline collectively cover more than half of the image, which hides too much of the visual content and reduces its impact."
+        },
+        {
+          "type": "heading",
+          "text": "3. Content Scannability"
+        },
+        {
+          "type": "paragraph",
+          "text": "Center-aligned text interrupts natural reading flow. Each new line forces the reader to pause and find the starting point, slowing down scanning speed."
+        },
+        {
+          "type": "heading",
+          "text": "Approach to Fixing It"
+        },
+        {
+          "type": "paragraph",
+          "text": "The initial proposal was to replace the overlay approach with a stacked card design. This would have eliminated all of the accessibility issues we identified. However, maintaining the visual language was critical—our brands needed the solution to stay closely aligned with their established identity. So we explored alternative solutions that would address accessibility issues while preserving the brand’s visual expression and user experience."
+        },
+        {
+          "type": "paragraph",
+          "text": "We ran the numbers to understand how to eliminate the accessibility issue. Since the lightest possible background in an image can be pure white, we used that as the baseline for testing. If white text can achieve sufficient contrast on top of pure white with an overlay, it will be legible on any other surface as well."
+        },
+        {
+          "type": "paragraph",
+          "text": "For white text (#FFFFFF) to meet WCAG AA (4.5:1) against a pure white background (#FFFFFF), a black overlay of at least 53.47% opacity is required. To meet the stricter WCAG AAA (7:1) standard, the overlay must be at least 65.08% opacity."
+        },
+        {
+          "type": "paragraph",
+          "text": "The problem with the old gradient was that it faded too quickly to lower opacity levels, making it impossible to consistently guarantee these contrast thresholds wherever text appeared."
+        },
+        {
+          "type": "heading",
+          "text": "1. Gradient Overlay Applied to Text Layer"
+        },
+        {
+          "type": "paragraph",
+          "text": "To ensure white text consistently meets accessibility guidelines, we refined how gradients were applied:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Instead of relying on the card’s fixed background, the gradient was applied directly to the text layer wrap.",
+            "This made the gradient independent of text height, ensuring both short and long headlines remain equally readable.",
+            "Within the text wrap, the gradient now ranges from 90% to 55% black, guaranteeing white text always passes WCAG AA contrast standards.",
+            "On top of this, we added a fixed gradient from 55% to 0%, preserving the smooth visual fade while maintaining legibility."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "Assets/acc-02.png",
+          "alt": "",
+          "caption": "An illustration showing how the new implementation works"
+        },
+        {
+          "type": "heading",
+          "text": "2. Increased Image Ratio"
+        },
+        {
+          "type": "paragraph",
+          "text": "We recommended brands to use image height for mobile and tablet breakpoints by shifting the aspect ratio to atleast 1:1. This would more be a brand decision based on their text length."
+        },
+        {
+          "type": "paragraph",
+          "text": "This allows more of the image to be visible, improving visual storytelling without sacrificing legibility."
+        },
+        {
+          "type": "heading",
+          "text": "3. Left-Aligned Content"
+        },
+        {
+          "type": "paragraph",
+          "text": "All overlay text is now left-aligned to improve scanning."
+        },
+        {
+          "type": "paragraph",
+          "text": "This aligns with common reading patterns, allowing users to quickly find the start of each new line without extra visual effort."
+        },
+        {
+          "type": "image",
+          "src": "Assets/acc-03.png",
+          "alt": "",
+          "caption": "Screenshots from Vogue and Bon Appétit showcasing the updated design changes"
+        },
+        {
+          "type": "heading",
+          "text": "Outcome"
+        },
+        {
+          "type": "paragraph",
+          "text": "By rethinking the gradient application, adjusting the image ratio, and improving text alignment, the Overlay Story Card is now:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Accessible across devices and image types",
+            "Visually balanced with improved image visibility",
+            "Faster to scan and read, enhancing the overall user experience"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -85,7 +85,7 @@
         }
     }
 
-    function renderArticle(project) {
+    function renderArticle(project, backTarget, backLabel) {
         const tags = Array.isArray(project.tags) ? project.tags : [];
         const tagsHtml = tags.map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join('');
         const blocks = Array.isArray(project.blocks) ? project.blocks : [];
@@ -93,7 +93,7 @@
 
         return `
             <header class="case-header">
-                <a href="work.html" class="case-back">← All work</a>
+                <a href="${escapeHtml(backTarget)}" class="case-back">← ${escapeHtml(backLabel)}</a>
                 <div class="case-meta">
                     <h1 class="case-title">${escapeHtml(project.title)}</h1>
                     <span class="project-year">${escapeHtml(project.year)}</span>
@@ -104,12 +104,12 @@
             <div class="case-body">${bodyHtml}</div>`;
     }
 
-    function renderNotFound(slug) {
+    function renderNotFound(slug, backTarget, backLabel, kindLabel) {
         return `
             <header class="case-header">
-                <a href="work.html" class="case-back">← All work</a>
-                <h1 class="case-title">Case study not found</h1>
-                <p class="case-summary">No project matches "${escapeHtml(slug || '')}".</p>
+                <a href="${escapeHtml(backTarget)}" class="case-back">← ${escapeHtml(backLabel)}</a>
+                <h1 class="case-title">${escapeHtml(kindLabel)} not found</h1>
+                <p class="case-summary">No entry matches "${escapeHtml(slug || '')}".</p>
             </header>`;
     }
 
@@ -117,28 +117,35 @@
         const root = document.querySelector('[data-case]');
         if (!root) return;
 
+        const source     = root.getAttribute('data-source') || 'projects.json';
+        const backTarget = root.getAttribute('data-back')   || 'work.html';
+        const backLabel  = root.getAttribute('data-back-label') || 'All work';
+        const kindLabel  = root.getAttribute('data-kind') || 'Case study';
+
         const slug = new URLSearchParams(window.location.search).get('slug');
 
-        let projects;
+        let items;
         try {
-            const res = await fetch('projects.json', { cache: 'no-cache' });
+            const res = await fetch(source, { cache: 'no-cache' });
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             const data = await res.json();
-            projects = Array.isArray(data) ? data : data.projects || [];
+            items = Array.isArray(data)
+                ? data
+                : (Object.values(data).find(Array.isArray) || []);
         } catch (err) {
-            console.error('Could not load projects.json:', err);
-            root.innerHTML = renderNotFound(slug);
+            console.error(`Could not load ${source}:`, err);
+            root.innerHTML = renderNotFound(slug, backTarget, backLabel, kindLabel);
             return;
         }
 
-        const project = projects.find((p) => p.slug === slug);
+        const project = items.find((p) => p.slug === slug);
         if (!project) {
-            root.innerHTML = renderNotFound(slug);
+            root.innerHTML = renderNotFound(slug, backTarget, backLabel, kindLabel);
             return;
         }
 
         document.title = `${project.title} — Irfan Rafeek`;
-        root.innerHTML = renderArticle(project);
+        root.innerHTML = renderArticle(project, backTarget, backLabel);
         initGalleries(root);
     }
 
