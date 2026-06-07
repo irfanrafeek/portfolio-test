@@ -19,6 +19,7 @@ html {
 
 body {
     font-family: var(--semantic-font-sans);
+    font-weight: var(--primitive-font-weight-regular);
     background-color: var(--semantic-color-background-primary);
     color: var(--semantic-color-text-primary);
     line-height: var(--primitive-line-height-normal);
@@ -78,7 +79,7 @@ nav.scrolled {
     text-decoration: none;
     color: var(--semantic-color-text-primary);
     font-size: var(--primitive-font-size-sm);
-    font-weight: var(--primitive-font-weight-medium);
+    font-weight: var(--primitive-font-weight-regular);
     transition: color 0.3s ease;
 }
 
@@ -95,7 +96,7 @@ nav.scrolled {
     border: 1px solid var(--semantic-color-border-primary);
     cursor: pointer;
     display: inline-block;
-    font-weight: var(--primitive-font-weight-medium);
+    font-weight: var(--primitive-font-weight-regular);
 }
 
 .nav-links a.cta-button:hover {
@@ -160,7 +161,7 @@ body.page--article {
 .location-header {
     font-family: var(--semantic-font-sans);
     font-size: var(--primitive-font-size-sm);
-    font-weight: var(--primitive-font-weight-medium);
+    font-weight: var(--primitive-font-weight-regular);
     letter-spacing: var(--primitive-letter-spacing-wide);
     text-transform: uppercase;
     color: var(--semantic-color-text-secondary);

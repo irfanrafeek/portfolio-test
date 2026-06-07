@@ -106,7 +106,7 @@
   --primitive-font-size-6xl: 58px;
 
   /* TYPOGRAPHY PRIMITIVES - FONT WEIGHTS */
-  --primitive-font-weight-regular: 400;
+  --primitive-font-weight-regular: 300;
   --primitive-font-weight-medium: 500;
   --primitive-font-weight-semibold: 600;
   --primitive-font-weight-bold: 700;
